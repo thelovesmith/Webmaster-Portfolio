@@ -43,15 +43,16 @@ const DividerMiddle = styled(Divider)`
 `;
 
 const Content = styled(ParallaxLayer)`
-  ${tw('p-6 md:p-12 lg:p-24 justify-center items-center flex z-50')};
+  ${tw('p-6 md:p-12 lg:p-24  justify-center items-center flex z-50')};
 `;
 
 const Hero = styled.div`
-  ${tw('w-full xl:w-2/3 lg:flex-row')};
+  ${tw('w-full xl:w-2/3 lg:flex-row sm:mb-32 sm:mt-32')};
+  text-align: center;
 `;
 
 const Inner = styled.div`
-  ${tw('w-full xxl:w-2/3 text-center lg:text-left')};
+  ${tw('w-full xxl:w-2/3 text-center lg:text-left ')};
 `;
 const InnerTwo = styled.div`
   ${tw('w-full xxl:w-2/3 text-center lg:text-left')};
@@ -59,13 +60,13 @@ const InnerTwo = styled.div`
   margin: 0px;
 `
 
-const BigTitle = styled.h1`
-  ${tw('text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide')};
+const BigTitle = styled.p`
+  ${tw('text-4xl sm:text-2xl md:text-3xl lg:text-5xl xxl:text-6xl font-serif text-white mb-6  ')};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.35);
 `;
 
 const Title = styled.h1`
-  ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide relative inline-block')};
+  ${tw('text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 sm:mb-4 tracking-wide relative inline-block ')};
   text-shadow: 1px 2px 15px rgba(255, 255, 255, .4);
   &:before {
     content: '';
@@ -76,17 +77,17 @@ const Title = styled.h1`
     background-size: 40px;
     animation: ${rotate} 4s linear infinite;
     left: -60px;
-    top: 5px;
+    top: 0px;
   }
 `;
 
 const Subtitle = styled.p`
-  ${tw('text-2xl lg:text-4xl font-sans text-white mt-8 xxl:w-3/4')};
-  text-shadow: 0 2px 15px rgba(255, 255, 0, 0.3);
+  ${tw('text-2xl sm:text-base md:text-2xl lg:text-3xl font-sans text-white mt-8 xxl:w-3/4')};
+  text-shadow: 0 1px 15px rgba(255, 255, 0, 0.3);
 `;
 
 const ProjectsWrapper = styled.div`
-  ${tw('flex flex-wrap justify-between mt-8')};
+  ${tw('flex flex-wrap justify-between mt-8 sm-')};
   display: grid;
   grid-gap: 4rem;
   grid-template-columns: repeat(2, 1fr);
@@ -117,28 +118,25 @@ const AboutHero = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw('rounded-full w-32 xl:w-48 shadow-lg h-auto')};
-  margin-right: 25px;
+  ${tw('rounded-full w-32 xl:w-64 shadow-lg h-auto sm:mb-8')};
+  
 `;
 
 const AboutSub = styled.span`
-  ${tw('text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl')};
+  ${tw('text-white sm:p-2 lg:ml-8 pt-12 lg:p-8 sm:text-xl text-2xl lg:text-4xl xl:text-4xl')};
   text-shadow: 1px 1px 5px black;
-  
-  
-  
+  background-image: linear-gradient(to right, #96232526, #96414345);
+  border-radius: 5px 20px;
+  border: 2px outset orange;
 `;
 
 const AboutDesc = styled.p`
-  ${tw('text-white text-lg md:text-2xl lg:text-3xl font-sans pt-8 md:pt-14 text-justify')};
+  ${tw('text-white sm:text-lg lg:text-3xl xl:text-3xl sm:p-2  lg:p-8 sm:tracking-tight')};
   line-height: 1.3em;
-  background-image: linear-gradient(to right, #80232526, #80414345);
+  background-image: linear-gradient(to right, #96232526, #96414345);
   text-shadow: 1px 1px 5px black;
   border-radius: 20px 5px;
   border: 1px groove orange;
-  padding: 20px;
-  
-  
 `;
 
 const ContactText = styled.p`
@@ -160,7 +158,7 @@ const Footer = styled.footer`
 `;
 
 const Skills = styled.div`
-   ${tw('flex flex-wrap justify-between mt-6')};
+   ${tw('md:w-1/2flex flex-wrap justify-between mt-6 sm:')};
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
@@ -173,6 +171,7 @@ const Skills = styled.div`
   }
 `
 const Language = styled.img`
+  ${tw('w-full sm:w-2/3 lg:w-full')}
   width: 100%;
   justify-self: center;
   align-self: center;
@@ -209,11 +208,11 @@ const Index = () => (
         <SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />
         <SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />
       </Divider>
-      <Content speed={1} offset={0}>
-          <Avatar src={avatar}/>
+      <Content speed={.5} offset={0}>
         <Hero>
+          <Avatar src={avatar}/>
           <BigTitle>
-            Ciao! <br /> My name is Avery-Dante.
+            Ciao! <br /> My name is Avery-Dante
           </BigTitle>
           <Subtitle>Full-Stack Developer | Multimedia Producer | Carpenter</Subtitle>
         </Hero>
@@ -226,22 +225,22 @@ const Index = () => (
         factor={2}
       />
     
-      <Content speed={0.4} offset={1} factor={.8}>
+      <Content speed={0.4} offset={1.15} factor={.8}>
         <Inner>
-          <Title>A Lil' Something About Me</Title>
+          <Title>About Me</Title>
           <AboutHero>
             <Avatar src={coder} alt="Avery-Dante" />
             <AboutSub>
-              Ciao amici!! Mi chiamo Avery-Dante!! I am a Full Stack Developer and Multimedia Producer, or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter.
+              I miei amici!! Mi chiamo Avery-Dante!! I am a Full Stack Developer and Multimedia Producer, or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter.
             </AboutSub>
           </AboutHero>
           <AboutDesc>
-            If my past experience as a carpenter has taught me one thing, it is that building web applications is very similar to building a home. They both require patience, organization, creativity, versatility, perseverance, leadership, and great teamwork. However, learning to build web apps requires you to break your code, not your fingers. Using the array of skills I have gained over the years, I aim to continue turning dreams into reality while building awesome web applications. 
+            If my past experience as a carpenter has taught me one thing, it is that building web applications is very similar to building a home. They both require patience, organization, creativity, versatility, perseverance, leadership, and great teamwork. However, learning to build web apps requires you to break your code, not your fingers. Using the array of skills I have gained over the years, I aim to continue making dreams and ideas a reality by building awesome web applications. 
           </AboutDesc>
           
         </Inner>
       </Content>
-      <Content speed={.5} offset={2} factor={3.2}>
+      <Content speed={.5} offset={2} factor={3}>
         <Inner>
 
           <Title>Skills</Title>
@@ -349,13 +348,13 @@ const Index = () => (
             >
               Organize your next potluck with this user friendly interface!!!
             </ProjectCard>
-            <ProjectCard
+            {/* <ProjectCard
               title="Capstone Project"
               link="#"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Lorem ipsum 
-            </ProjectCard>
+            </ProjectCard> */}
           </ProjectsWrapper>
         </Inner>
 
