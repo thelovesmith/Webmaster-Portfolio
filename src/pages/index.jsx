@@ -45,6 +45,9 @@ const DividerMiddle = styled(Divider)`
 const Content = styled(ParallaxLayer)`
   ${tw('p-6 md:p-12 lg:p-24  justify-center items-center flex z-50')};
 `;
+const ContentTwo = styled(ParallaxLayer)`
+  ${tw('p-6 md:p-12 lg:p-24 justify-center items-center  lg:flex md:flex  sm:flex sm:flex-col-reverse z-50 ')};
+`;
 
 const Hero = styled.div`
   ${tw('w-full xl:w-2/3 lg:flex-row sm:mb-32 sm:mt-32')};
@@ -52,12 +55,11 @@ const Hero = styled.div`
 `;
 
 const Inner = styled.div`
-  ${tw('w-full xxl:w-2/3 text-center lg:text-left ')};
+  ${tw('w-full xxl:w-2/3 text-center lg:text-left lg:full')};
 `;
 const InnerTwo = styled.div`
-  ${tw('w-full xxl:w-2/3 text-center lg:text-left')};
-  padding: 0px;
-  margin: 0px;
+  ${tw('w-full xxl:w-2/3 text-center lg:text-left  ')};
+ 
 `
 
 const BigTitle = styled.p`
@@ -82,12 +84,12 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  ${tw('text-2xl sm:text-base md:text-2xl lg:text-3xl font-sans text-white mt-8 xxl:w-3/4')};
+  ${tw('text-2xl sm:text-base md:text-2xl lg:text-3xl font-sans text-white mt-8 ')};
   text-shadow: 0 1px 15px rgba(255, 255, 0, 0.3);
 `;
 
 const ProjectsWrapper = styled.div`
-  ${tw('flex flex-wrap justify-between mt-8 sm-')};
+  ${tw('flex flex-wrap justify-between mt-8  lg:w-full')};
   display: grid;
   grid-gap: 4rem;
   grid-template-columns: repeat(2, 1fr);
@@ -118,7 +120,7 @@ const AboutHero = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw('rounded-full w-32 xl:w-64 shadow-lg h-auto sm:mb-8')};
+  ${tw('rounded-full w-32 xl:w-64  shadow-lg h-auto sm:mb-8')};
   
 `;
 
@@ -148,7 +150,7 @@ const ContactText = styled.p`
 `;
 
 const Footer = styled.footer`
-  ${tw('text-center  absolute pin-b p-6 font-sans text-md md:text-xl lg:text-lg')};
+  ${tw('text-center  absolute pin-b p-6 font-sans text-md md:text-lg lg:text-2xl')};
   color: #F97628;
   text-shadow: 1px 1px 3px #AF7451;
   
@@ -158,7 +160,7 @@ const Footer = styled.footer`
 `;
 
 const Skills = styled.div`
-   ${tw('md:w-1/2flex flex-wrap justify-between mt-6 sm:')};
+   ${tw('md:w-1/2flex flex-wrap justify-between mt-6 lg:w-full')};
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
@@ -348,13 +350,13 @@ const Index = () => (
             >
               Organize your next potluck with this user friendly interface!!!
             </ProjectCard>
-            {/* <ProjectCard
+            <ProjectCard
               title="Capstone Project"
               link="#"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Lorem ipsum 
-            </ProjectCard> */}
+            </ProjectCard>
           </ProjectsWrapper>
         </Inner>
 
@@ -375,7 +377,7 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
-      <Content speed={0.4} offset={5}>
+      <ContentTwo speed={0.4} offset={5}>
         <InnerTwo>
           <Title>Please Get In Touch:</Title>
           <ContactText>
@@ -389,7 +391,7 @@ const Index = () => (
           2018 &copy;  by Avery-Dante Hinds.{' '}
           {/* <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>. */}
         </Footer>
-      </Content>
+      </ContentTwo>
       <Divider speed={0.1} offset={4}>
         <UpDown>
           <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />

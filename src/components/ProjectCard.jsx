@@ -5,14 +5,11 @@ import styled from 'react-emotion';
 
 
 const Wrapper = styled.a`
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  ${tw('shadow-lg relative no-underline rounded-lg px-8 py-8 md:py-24 text-white')};
+ 
+  ${tw('shadow-lg relative no-underline rounded-lg px-8 py-8 md:py-24 text-white ')};
   background-image: url(${props => props.bg});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
     transform: translateY(-5px);
@@ -20,10 +17,10 @@ const Wrapper = styled.a`
 `;
 
 const Text = styled.div`
-  ${tw('text-orange opacity-75 font-sans  md:text-base')};
+  ${tw('text-orange opacity-75 font-sans  md:text-base sm:text-sm lg:text-2xl')};
   text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
-  font-size: 30px;
-  padding: 20px;
+  
+  padding: 10px;
 
 `;
 
@@ -32,7 +29,7 @@ const Title = styled.div`
   text-shadow: 1px 2px 15px rgba(255, 255, 255, 0.5);
 `;
 const Back = styled.div`
-background-color: rgba(100, 193, 115, 0.4);
+;
 display: flex-column;
 justify-content: center;
 align-content: center;
