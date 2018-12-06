@@ -14,6 +14,7 @@ import triangle from '../images/triangle.svg';
 import potluck from '../images/potluck1.png'
 import avatar from '../images/avery.png';
 import gits from  '../images/GITS.png';
+import jaws from '../images/jaws.png'
 import code from '../images/code.png';
 import reactlogo from '../images/react.jpeg';
 import jeopardy from '../images/jeopardy.png';
@@ -352,8 +353,8 @@ const Index = () => (
             </ProjectCard>
             <ProjectCard
               title="Capstone Project"
-              link="#"
-              bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+              link="https://jackofallwaves.netlify.com/"
+              bg={jaws}//"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Jack Of All Waves music collective website; become a friend of JAWS!!!
             </ProjectCard>
@@ -382,8 +383,8 @@ const Index = () => (
           <Title>Please Get In Touch:</Title>
           <ContactText>
             Email me <a href="mailto:averydante9@gmail.com">HERE</a> or find me on other platforms:{' '}
-            <a href="https://github.com/thelovesmith">Github</a> {' '}
-            <a href="https://www.linkedin.com/in/avery-dante-hinds/">LinkedIn</a>
+            <a href="https://github.com/thelovesmith" target='_blank'>Github</a> {' '}
+            <a href="https://www.linkedin.com/in/avery-dante-hinds/" target='_blank'>LinkedIn</a>
           </ContactText>
         </InnerTwo>
           <Avatar src={program}/>
