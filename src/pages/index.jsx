@@ -84,8 +84,8 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  ${tw('text-2xl sm:text-base md:text-2xl lg:text-3xl font-sans text-white mt-8 ')};
-  text-shadow: 0 1px 15px rgba(255, 255, 0, 0.3);
+  ${tw('text-2xl sm:text-base md:text-2xl lg:text-3xl font-sans text-white mt-8 p-0')};
+  text-shadow: 1px 1px 15px rgba(255, 255, 0, 0.3);
 `;
 
 const ProjectsWrapper = styled.div`
@@ -233,7 +233,7 @@ const Index = () => (
           <AboutHero>
             <Avatar src={coder} alt="Avery-Dante" />
             <AboutSub>
-              I miei amici!! Mi chiamo Avery-Dante!! I am a Full Stack Developer and Multimedia Producer, or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter.
+              I miei amici (my friends)!! Mi chiamo Avery-Dante!! I am a Full Stack Developer and Multimedia Producer, or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter.
             </AboutSub>
           </AboutHero>
           <AboutDesc>
@@ -345,7 +345,7 @@ const Index = () => (
             </ProjectCard>
             <ProjectCard
               title="Poppin' Potluck"
-              link="#"
+              link="https://poppin-potluck.netlify.com//"
               bg={potluck}//"linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
               Organize your next potluck with this user friendly interface!!!
@@ -355,7 +355,7 @@ const Index = () => (
               link="#"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              Lorem ipsum 
+              Jack Of All Waves music collective website; become a friend of JAWS!!!
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -383,7 +383,7 @@ const Index = () => (
           <ContactText>
             Email me <a href="mailto:averydante9@gmail.com">HERE</a> or find me on other platforms:{' '}
             <a href="https://github.com/thelovesmith">Github</a> {' '}
-            <a href="#">Instagram</a>
+            <a href="https://www.linkedin.com/in/avery-dante-hinds/">LinkedIn</a>
           </ContactText>
         </InnerTwo>
           <Avatar src={program}/>
