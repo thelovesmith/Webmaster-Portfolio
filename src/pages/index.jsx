@@ -69,7 +69,7 @@ const BigTitle = styled.p`
 `;
 
 const Title = styled.h1`
-  ${tw('text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 sm:mb-4 tracking-wide relative inline-block ')};
+  ${tw('text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 sm:mb-4 lg:mb-10 tracking-wide relative inline-block ')};
   text-shadow: 1px 2px 15px rgba(255, 255, 255, .4);
   &:before {
     content: '';
@@ -183,7 +183,7 @@ const Language = styled.img`
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={6}>
+    <Parallax pages={7}>
       <Divider speed={0.2} offset={0}>
         <UpDown>
           <SVG icon="triangle" className={hidden} width={48} stroke={colors["pink-dark"]} left="10%" top="20%" />
@@ -228,7 +228,7 @@ const Index = () => (
         factor={2}
       />
     
-      <Content speed={0.4} offset={1.15} factor={.8}>
+      <Content speed={0.4} offset={1.5} factor={.8}>
         <Inner>
           <Title>About Me</Title>
           <AboutHero>
@@ -243,7 +243,7 @@ const Index = () => (
           
         </Inner>
       </Content>
-      <Content speed={.5} offset={2} factor={3}>
+      <Content speed={.5} offset={2.5} factor={3.5}>
         <Inner>
 
           <Title>Skills</Title>
@@ -326,7 +326,7 @@ const Index = () => (
         <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
         <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
       </Divider>
-      <Content speed={0.4} offset={4.5}>
+      <Content speed={0.4} offset={5}>
         <Inner>
           <Title>Projects</Title>
           <ProjectsWrapper>
@@ -362,7 +362,7 @@ const Index = () => (
         </Inner>
 
       </Content>
-      <Divider fill="#59C173" speed={0.2} offset={5}>
+      <Divider fill="#59C173" speed={0.2} offset={6}>
         <WaveWrapper>
           <InnerWave>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
@@ -378,7 +378,7 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
-      <ContentTwo speed={0.4} offset={5}>
+      <ContentTwo speed={0.4} offset={6}>
         <InnerTwo>
           <Title>Please Get In Touch:</Title>
           <ContactText>
@@ -418,6 +418,22 @@ const Index = () => (
           <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
           <SVG icon="upDown" className={hidden} width={8} fill={colors['green']} left="45%" top="10%" />
         </UpDownWide>
+        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
+        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
+        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
+        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
+      </Divider>
+      <Divider speed={0.1} offset={6}>
+        
+        <UpDownWide>
+          <SVG icon="triangle" width={12} stroke={colors.orange} left="95%" top="50%" />
+          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
+          <SVG icon="upDown" className={hidden} width={8} fill={colors['green']} left="45%" top="10%" />
+        </UpDownWide>
+        <UpDown>
+          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
+          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
+        </UpDown>
         <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
         <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
         <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
