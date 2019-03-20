@@ -11,10 +11,10 @@ import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations'
 import { hidden } from '../styles/utils';
 import { colors } from '../../tailwind';
 import triangle from '../images/triangle.svg';
-import potluck from '../images/potluck1.png'
+import potluck from '../images/potluck1.png';
 import avatar from '../images/avery.png';
 import gits from  '../images/GITS.png';
-import jaws from '../images/jaws.png'
+import jaws from '../images/jaws.png';
 import code from '../images/code.png';
 import reactlogo from '../images/react.jpeg';
 import jeopardy from '../images/jeopardy.png';
@@ -24,10 +24,12 @@ import mongo from '../images/mongo.png';
 import firebase from '../images/firebase.jpeg';
 import django from '../images/django.jpeg';
 import gatsby from '../images/gatsbyjs.png';
-import adobe from '../images/adobe.png'
-import graphql from '../images/graphqql.png'
-import coder from '../images/coder.svg'
-import program from '../images/program.svg'
+import adobe from '../images/adobe.png';
+import graphql from '../images/graphqql.png';
+import flutter from '../images/flutter.jpeg';
+import redux from '../images/redux.jpg';
+import coder from '../images/coder.svg';
+import program from '../images/program.svg';
 import '../styles/global';
 
 const Divider = styled(ParallaxLayer)`
@@ -174,8 +176,8 @@ const Skills = styled.div`
   }
 `
 const Language = styled.img`
-  ${tw('w-full sm:w-2/3 lg:w-full')}
-  width: 100%;
+  ${tw('w-4/5 sm:w-2/3 lg:w-4/5')}
+  width: 75%;
   justify-self: center;
   align-self: center;
 `
@@ -217,7 +219,7 @@ const Index = () => (
           <BigTitle>
             Ciao! <br /> My name is Avery-Dante
           </BigTitle>
-          <Subtitle>Full-Stack Developer | Multimedia Producer | Carpenter</Subtitle>
+          <Subtitle>Full-Stack Developer | Multimedia Producer | Graphic Designer</Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -228,25 +230,12 @@ const Index = () => (
         factor={2}
       />
     
-      <Content speed={0.4} offset={1.5} factor={.8}>
-        <Inner>
-          <Title>About Me</Title>
-          <AboutHero>
-            <Avatar src={coder} alt="Avery-Dante" />
-            <AboutSub>
-              I miei amici (my friends)!! Mi chiamo Avery-Dante!! I am a Full Stack Developer and Multimedia Producer, or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter.
-            </AboutSub>
-          </AboutHero>
-          <AboutDesc>
-            If my past experience as a carpenter has taught me one thing, it is that building web applications is very similar to building a home. They both require patience, organization, creativity, versatility, perseverance, leadership, and great teamwork. However, learning to build web apps requires you to break your code, not your fingers. Using the array of skills I have gained over the years, I aim to continue making dreams and ideas a reality by building awesome web applications. 
-          </AboutDesc>
-          
-        </Inner>
-      </Content>
-      <Content speed={.5} offset={2.5} factor={3.5}>
+      
+      <Content  speed={0.4} offset={1.5} factor={2}>
+     
         <Inner>
 
-          <Title>Skills</Title>
+          <Title>My Skills Include</Title>
           <Skills>
 
 
@@ -278,6 +267,12 @@ const Index = () => (
 
             </Language>
             <Language src={graphql}>
+
+            </Language>
+            <Language src={redux}>
+
+            </Language>
+            <Language src={flutter}>
 
             </Language>
           </Skills>
@@ -326,7 +321,8 @@ const Index = () => (
         <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
         <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
       </Divider>
-      <Content speed={0.4} offset={5}>
+      <Content speed={.5} offset={2.5} factor={4.5}>
+      
         <Inner>
           <Title>Projects</Title>
           <ProjectsWrapper>
@@ -378,6 +374,23 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
+      <Content speed={0.4} offset={2.5} factor={6}>
+        <Inner>
+          <Title>About Me</Title>
+          <AboutHero>
+            <Avatar src={coder} alt="Avery-Dante" />
+            <AboutSub>
+               I am a Full Stack Developer and Multimedia Producer dedicated to bringing ideas to life. 
+
+              {/* , or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter. */}
+            </AboutSub>
+          </AboutHero>
+          {/* <AboutDesc>
+            If my past experience as a carpenter has taught me one thing, it is that building web applications is very similar to building a home. They both require patience, organization, creativity, versatility, perseverance, leadership, and great teamwork. However, learning to build web apps requires you to break your code, not your fingers. Using the array of skills I have gained over the years, I aim to continue making dreams and ideas a reality by building awesome web applications. 
+          </AboutDesc> */}
+          
+        </Inner>
+      </Content>
       <ContentTwo speed={0.4} offset={6}>
         <InnerTwo>
           <Title>Please Get In Touch:</Title>
