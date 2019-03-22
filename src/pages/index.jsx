@@ -403,7 +403,6 @@ const Index = () => (
           <Avatar src={program}/>
         <Footer>
           2018 &copy;  by Avery-Dante Hinds.{' '}
-          {/* <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>. */}
         </Footer>
       </ContentTwo>
       <Divider speed={0.1} offset={4}>
