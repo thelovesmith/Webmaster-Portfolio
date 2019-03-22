@@ -16,18 +16,18 @@ const Wrapper = styled.a`
   }
 `;
 
-// const Text = styled.div`
-//   ${tw('text-orange-light opacity-75 font-sans font-bold md:text-base sm:text-sm lg:text-2xl')};
-//   text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+const Text = styled.div`
+  ${tw('text-orange-light opacity-75 font-sans font-bold md:text-base sm:text-sm lg:text-2xl')};
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
   
-//   padding: 10px;
+  padding: 10px;
 
-// `;
+`;
 
-// const Title = styled.div`
-//   ${tw('text-orange-light uppercase text-2xl font-bold font-mono md:text-3xl xl:text-4xl tracking-wide font-sans pt-4')};
-//   text-shadow: 1px 2px 15px rgba(255, 255, 255, 0.5);
-// `;
+const Title = styled.div`
+  ${tw('text-orange-light uppercase text-2xl font-bold font-mono md:text-3xl xl:text-4xl tracking-wide font-sans pt-4')};
+  text-shadow: 1px 2px 15px rgba(255, 255, 255, 0.5);
+`;
 const Back = styled.div`
 ;
 display: flex-column;
@@ -47,8 +47,8 @@ background: linear-gradient(to right, #601D976C, #6093F9B9, #601D976C); /* W3C, 
 const ProjectCard = ({ title, link, children, bg }) => (
   <Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
     <Back>
-    {/* <Title>{title}</Title> */}
-    {/* <Text>{children}</Text> */}
+    <Title>{title}</Title>
+    <Text>{children}</Text>
 
     </Back>
   </Wrapper>
@@ -59,6 +59,6 @@ export default ProjectCard;
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  // children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  // bg: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  bg: PropTypes.string.isRequired,
 };
