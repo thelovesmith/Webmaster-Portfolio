@@ -32,9 +32,11 @@ justify-content: center;
 align-content: center;
 border-radius: 5px;
 text-align: center;
-background: #1D976C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #601D976C, #6093F9B9, #601D976C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #601D976C, #6093F9B9, #601D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 `;
 
 const ProjectCard = ({ title, link, children, bg }) => (
