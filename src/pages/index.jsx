@@ -119,7 +119,7 @@ const InnerWave = styled.div`
 `;
 
 const AboutHero = styled.div`
-  ${tw('flex flex-col lg:flex-row items-center mt-8')};
+  ${tw('flex flex-col lg:flex-row items-center m-8')};
 `;
 
 const Avatar = styled.img`
@@ -128,7 +128,7 @@ const Avatar = styled.img`
 `;
 
 const AboutSub = styled.span`
-  ${tw('text-white sm:p-2 lg:ml-8 pt-12 lg:p-8 sm:text-xl text-2xl lg:text-4xl xl:text-4xl')};
+  ${tw('text-white sm:p-2 lg: pt-12 lg:p-8 sm:text-xl text-2xl lg:text-4xl xl:text-4xl')};
   text-shadow: 1px 1px 5px black;
   background-image: linear-gradient(to right, #96232526, #96414345);
   border-radius: 5px 20px;
@@ -213,6 +213,7 @@ const Index = () => (
         <SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />
         <SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />
       </Divider>
+      //! Titles //
       <Content speed={.5} offset={0}>
         <Hero>
           <Avatar src={avatar}/>
@@ -232,11 +233,14 @@ const Index = () => (
       />
     
       
-      <Content  speed={0.4} offset={1.5} factor={2}>
+      <Content  speed={0.5} offset={2.5} factor={1.5}>
      
         <Inner>
 
-          <Title>My Skills Include</Title>
+          <Title>Tech</Title>
+          <AboutDesc>
+          Over the years I have acquired an array of skills, and the list of tech I use is ever growing. Im not going to map through the whole thing but below are a few technologies I have been using more recently. 
+          </AboutDesc>
           <Skills>
 
 
@@ -322,7 +326,7 @@ const Index = () => (
         <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
         <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
       </Divider>
-      <Content speed={.5} offset={2.5} factor={4.5}>
+      <Content speed={.5} offset={3.0} factor={6}>
       
         <Inner>
           <Title>Projects</Title>
@@ -375,13 +379,13 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
-      <Content speed={0.4} offset={2.5} factor={6}>
+      <Content speed={0.5} offset={1} factor={1}>
         <Inner>
           <Title>About Me</Title>
           <AboutHero>
-            <Avatar src={coder} alt="Avery-Dante" />
+            {/* <Avatar src={coder} alt="Avery-Dante" /> */}
             <AboutSub>
-               I am a Full Stack Developer and Multimedia Producer dedicated to bringing ideas to life. 
+               I am a Developer, a Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life. Whether they are my ideas or the ideas others, I enjoy the thrill of exploring uncharted territories and engineering innovative products. I am not sure what brought you to my site ,but I hope you enjoy it. If you are a fellow developer, designer, producer, or entrepenuer please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideads.
 
               {/* , or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter. */}
             </AboutSub>
