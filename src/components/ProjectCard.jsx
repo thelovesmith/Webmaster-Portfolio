@@ -17,9 +17,13 @@ const Wrapper = styled.a`
 `;
 
 const Text = styled.div`
-  ${tw('text-orange-light opacity-75 font-sans font-bold md:text-base sm:text-sm lg:text-2xl')};
+  ${tw('text-orange-light opacity-75 font-sans  md:text-base sm:text-sm lg:text-2xl')};
   text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
   padding: 10px;
+`;
+
+const Comments = styled.p`
+${tw('text-white opacity-50 font-serif md: text-base sm:text-sm ')}
 `;
 
 const Title = styled.div`
@@ -39,11 +43,12 @@ background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, F
 
 `;
 
-const ProjectCard = ({ title, link, children, bg }) => (
+const ProjectCard = ({ title, link, children, bg, comments }) => (
   <Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
     <Back>
       <Title>{title}</Title>
       <Text>{children}</Text>
+      <Comments>{comments}</Comments>
     </Back>
   </Wrapper>
 );
@@ -55,4 +60,5 @@ ProjectCard.propTypes = {
   link: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   bg: PropTypes.string.isRequired,
+  comments: PropTypes.string,
 };

@@ -344,6 +344,8 @@ const Index = () => (
               bg={jeopardy}//"linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
               Test you basic coding knowledge with this fun interactive Jeopardy game!!!
+              <br></br>
+              My first website lol
             </ProjectCard>
             <ProjectCard
               title="Poppin' Potluck"
@@ -358,6 +360,8 @@ const Index = () => (
               bg={jaws}//"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Jack Of All Waves music collective website; become a friend of JAWS!!!
+              <br></br>
+              <strong>**Under Construction**</strong>
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -384,11 +388,11 @@ const Index = () => (
           <Title>About Me</Title>
           <AboutHero>
             {/* <Avatar src={coder} alt="Avery-Dante" /> */}
-            <AboutSub>
-               I am a Developer, a Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life. Whether they are my ideas or the ideas others, I enjoy the thrill of exploring uncharted territories and engineering innovative products. I am not sure what brought you to my site ,but I hope you enjoy it. If you are a fellow developer, designer, producer, or entrepenuer please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideads.
+            <AboutDesc>
+              I am a Developer, a Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life. Whether they are my ideas or the ideas others, I enjoy the thrill of exploring uncharted territories and engineering innovative products. I don't know what brought you to my site, but I hope you enjoy it. If you are a fellow <strong>Developer</strong>, <strong>Designer</strong>, <strong>Producer</strong>, <strong>Artist</strong>, or <strong>Entrepreneur</strong> please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideas.
 
               {/* , or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter. */}
-            </AboutSub>
+            </AboutDesc>
           </AboutHero>
           {/* <AboutDesc>
             If my past experience as a carpenter has taught me one thing, it is that building web applications is very similar to building a home. They both require patience, organization, creativity, versatility, perseverance, leadership, and great teamwork. However, learning to build web apps requires you to break your code, not your fingers. Using the array of skills I have gained over the years, I aim to continue making dreams and ideas a reality by building awesome web applications. 
