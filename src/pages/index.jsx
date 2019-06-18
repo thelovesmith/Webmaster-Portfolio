@@ -66,8 +66,9 @@ const InnerTwo = styled.div`
 `
 
 const BigTitle = styled.p`
-  ${tw('text-6xl sm:text-4xl md:text-5xl lg:text-6xl xxl:text-7xl font-serif text-white mb-6  ')};
+  ${tw('text-5xl sm:text-4xl lg:text-5xl font-serif text-white m-0')};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.35);
+  
 `;
 
 const Title = styled.h1`
@@ -123,7 +124,7 @@ const AboutHero = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw('rounded-full w-32 xl:w-64  shadow-lg h-auto sm:mb-8')};
+  ${tw('rounded-full w-48 xl:w-1/2 shadow-lg h-auto sm:mb-8')};
   
 `;
 
@@ -346,8 +347,9 @@ const Index = () => (
               bg={jeopardy}//"linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
               Test you basic coding knowledge with this fun interactive Jeopardy game!!!
-              <br></br>
-              My first website lol
+              <br/>
+              The first website I ever made. lol
+              
             </ProjectCard>
             <ProjectCard
               title="Poppin' Potluck"
@@ -362,8 +364,8 @@ const Index = () => (
               bg={jaws}//"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Jack Of All Waves music collective website; become a friend of JAWS!!!
-              <br></br>
-              <strong>**Under Construction**</strong>
+              <br/>
+              **Under Construction**
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -392,7 +394,7 @@ const Index = () => (
             {/* <Avatar src={coder} alt="Avery-Dante" /> */}
           {/*   */}
             <AboutDesc>
-              I am a Developer, a Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life and is actively looking for development work. I enjoy the thrill of exploring new technologies and engineering innovative products. If you are a fellow Developer, Designer, Producer, Artist, or Entrepreneur please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideas.
+              I am a  Full-Stack Developer, Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life and is actively looking for work. I enjoy the thrill of exploring new technologies and engineering innovative products. If you are a fellow Developer, Designer, Producer, Artist, or Entrepreneur please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideas.
 
               {/* , or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter. */}
             </AboutDesc>

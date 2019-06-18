@@ -25,7 +25,7 @@ View the full documentation at https://tailwindcss.com.
 */
 
 // eslint-disable-next-line
-const defaultConfig = require('tailwindcss/defaultConfig')();
+// const defaultConfig = require('tailwindcss/defaultConfig')();
 
 /*
 |-------------------------------------------------------------------------------
@@ -253,8 +253,8 @@ module.exports = {
     '3xl': '2rem', // 30px
     '4xl': '3rem', // 36px
     '5xl': '5rem', // 48px
-    '6xl': '8rem',
-    '7xl': '10rem',
+    '6xl': '6rem', // 96px
+    '7xl': '12rem',
   },
 
   /*
