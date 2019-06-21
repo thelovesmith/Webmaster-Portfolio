@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import 'typeface-cantata-one';
 import 'typeface-open-sans';
-import { Parallax, ParallaxLayer } from 'react-spring/dist/addons';
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import SEO from '../components/SEO';
 import SVG from '../components/SVG';
 import ProjectCard from '../components/ProjectCard';
@@ -28,6 +28,8 @@ import adobe from '../images/adobe.png';
 import graphql from '../images/graphqql.png';
 import flutter from '../images/flutter.jpeg';
 import redux from '../images/redux.jpg';
+import islandStream1   from '../images/islandStream1.png';
+import islandStream2  from "../images/islandStream2.png";
 import coder from '../images/coder.svg';
 import program from '../images/program.svg';
 import '../styles/global';
@@ -362,6 +364,14 @@ const Index = () => (
               Jack Of All Waves music collective website; become a friend of JAWS!!!
               <br></br>
               <strong>**Under Construction**</strong>
+            </ProjectCard>
+            <ProjectCard 
+              title="Island Stream"
+              link="https://www.islandstreamapp.com/"
+              bg={islandStream1}
+
+            >
+              
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
