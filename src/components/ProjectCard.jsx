@@ -56,7 +56,7 @@ export default ProjectCard;
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.any]).isRequired,
   bg: PropTypes.string.isRequired,
   comments: PropTypes.string,
 };

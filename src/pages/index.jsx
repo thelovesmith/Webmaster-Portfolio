@@ -68,8 +68,9 @@ const InnerTwo = styled.div`
 `
 
 const BigTitle = styled.p`
-  ${tw('text-4xl sm:text-2xl md:text-3xl lg:text-5xl xxl:text-6xl font-serif text-white mb-6  ')};
+  ${tw('text-5xl sm:text-4xl lg:text-5xl font-serif text-white m-0')};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.35);
+  
 `;
 
 const Title = styled.h1`
@@ -125,7 +126,7 @@ const AboutHero = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw('rounded-full w-32 xl:w-64  shadow-lg h-auto sm:mb-8')};
+  ${tw('rounded-full w-48 xl:w-1/2 shadow-lg h-auto sm:mb-8')};
   
 `;
 
@@ -140,7 +141,9 @@ const AboutSub = styled.span`
 const AboutDesc = styled.p`
   ${tw('text-white sm:text-lg lg:text-3xl xl:text-3xl sm:p-2  lg:p-8 sm:tracking-tight')};
   line-height: 1.3em;
-  background-image: linear-gradient(to right, #96232526, #96414345);
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-shadow: 1px 1px 5px black;
   border-radius: 20px 5px;
   border: 1px groove orange;
@@ -346,8 +349,9 @@ const Index = () => (
               bg={jeopardy}//"linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
               Test you basic coding knowledge with this fun interactive Jeopardy game!!!
-              <br></br>
-              My first website lol
+              <br/>
+              The first website I ever made. lol
+              
             </ProjectCard>
             <ProjectCard
               title="Poppin' Potluck"
@@ -362,8 +366,8 @@ const Index = () => (
               bg={jaws}//"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Jack Of All Waves music collective website; become a friend of JAWS!!!
-              <br></br>
-              <strong>**Under Construction**</strong>
+              <br/>
+              **Under Construction**
             </ProjectCard>
             <ProjectCard 
               title="Island Stream"
@@ -398,8 +402,9 @@ const Index = () => (
           <Title>About Me</Title>
           <AboutHero>
             {/* <Avatar src={coder} alt="Avery-Dante" /> */}
+          {/*   */}
             <AboutDesc>
-              I am a Developer, a Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life. Whether they are my ideas or the ideas others, I enjoy the thrill of exploring uncharted territories and engineering innovative products. I don't know what brought you to my site, but I hope you enjoy it. If you are a fellow <strong>Developer</strong>, <strong>Designer</strong>, <strong>Producer</strong>, <strong>Artist</strong>, or <strong>Entrepreneur</strong> please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideas.
+              I am a  Full-Stack Developer, Producer, and a Designer born and raised in Philadelphia who is dedicated to bringing ideas to life and is actively looking for work. I enjoy the thrill of exploring new technologies and engineering innovative products. If you are a fellow Developer, Designer, Producer, Artist, or Entrepreneur please don't be afraid to reach out and connect with me on GitHub, LinkedIn, Instagram, or any other social sites!! I am very open to working with others and sharing ideas.
 
               {/* , or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter. */}
             </AboutDesc>
