@@ -1,4 +1,4 @@
-/* global tw */
+/*global tw */
 import React from 'react';
 import styled from 'react-emotion';
 import 'typeface-cantata-one';
@@ -10,6 +10,8 @@ import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
 import { hidden } from '../styles/utils';
 import { colors } from '../../tailwind';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from "gatsby";
 import triangle from '../images/triangle.svg';
 import potluck from '../images/potluck1.png';
 import avatar from '../images/avery.png';
@@ -25,7 +27,7 @@ import firebase from '../images/firebase.jpeg';
 import django from '../images/django.jpeg';
 import gatsby from '../images/gatsbyjs.png';
 import adobe from '../images/adobe.png';
-import graphql from '../images/graphqql.png';
+import graphqql from '../images/graphqql.png';
 import flutter from '../images/flutter.jpeg';
 import redux from '../images/redux.jpg';
 import islandStream1   from '../images/islandStream1.png';
@@ -33,6 +35,9 @@ import islandStream2  from "../images/islandStream2.png";
 import coder from '../images/coder.svg';
 import program from '../images/program.svg';
 import '../styles/global';
+
+
+
 
 const Divider = styled(ParallaxLayer)`
   ${tw('absolute w-full h-full')};
@@ -55,8 +60,9 @@ const ContentTwo = styled(ParallaxLayer)`
 `;
 
 const Hero = styled.div`
-  ${tw('w-full xl:w-2/3 lg:flex-row sm:mb-32 sm:mt-32')};
+  ${tw('w-full flex flex-col xl:w-2/3 lg:flex-col sm:mb-32 sm:mt-32')};
   text-align: center;
+  justify-content: center;
 `;
 
 const Inner = styled.div`
@@ -125,7 +131,12 @@ const AboutHero = styled.div`
   ${tw('flex flex-col lg:flex-row items-center m-8')};
 `;
 
-const Avatar = styled.img`
+const Avatar = styled(Img)`
+  ${tw('rounded-full w-48 xl:w-1/2 shadow-lg h-auto sm:mb-8')};
+  margin: auto;
+  
+`;
+const Avatar2 = styled.img`
   ${tw('rounded-full w-48 xl:w-1/2 shadow-lg h-auto sm:mb-8')};
   
 `;
@@ -187,7 +198,19 @@ const Language = styled.img`
   align-self: center;
 `
 
-const Index = () => (
+const Index = () => {
+   const data = useStaticQuery(graphql`
+  query {
+    selfPortrait: file(relativePath: {eq: "avery.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`)
+return(
   <React.Fragment>
     <SEO />
     <Parallax pages={7}>
@@ -221,7 +244,8 @@ const Index = () => (
       //! Titles //
       <Content speed={.5} offset={0}>
         <Hero>
-          <Avatar src={avatar}/>
+          <Avatar fluid={data.selfPortrait.childImageSharp.fluid}/>
+          {/* <Img fluid={data.selfPortrait.childImageSharp.fluid}/> */}
           <BigTitle>
             Avery-Dante 
           </BigTitle>
@@ -276,7 +300,7 @@ const Index = () => (
             <Language src={gatsby}>
 
             </Language>
-            <Language src={graphql}>
+            <Language src={graphqql}>
 
             </Language>
             <Language src={redux}>
@@ -424,7 +448,7 @@ const Index = () => (
             <a href="https://www.linkedin.com/in/avery-dante-hinds/" target='_blank'>LinkedIn</a>
           </ContactText>
         </InnerTwo>
-          <Avatar src={program}/>
+          <Avatar2 src={program}/>
         <Footer>
           2018 &copy;  by Avery-Dante Hinds.{' '}
         </Footer>
@@ -476,7 +500,7 @@ const Index = () => (
         <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
       </Divider>
     </Parallax>
-  </React.Fragment>
-);
+  </React.Fragment>)
+}
 
 export default Index;
