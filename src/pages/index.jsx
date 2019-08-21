@@ -31,6 +31,7 @@ import graphqql from '../images/graphqql.png';
 import flutter from '../images/flutter.jpeg';
 import redux from '../images/redux.jpg';
 import islandStream1   from '../images/islandStream1.png';
+import solarX from "../images/solarX.png";
 import islandStream2  from "../images/islandStream2.png";
 import coder from '../images/coder.svg';
 import program from '../images/program.svg';
@@ -390,6 +391,15 @@ return(
               bg={jaws}//"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Jack Of All Waves music collective website; become a friend of JAWS!!!
+              <br/>
+              **Under Construction**
+            </ProjectCard>
+            <ProjectCard
+              title="Solar Xchange"
+              link="https://mysolarxchange.com/"
+              bg={solarX}//"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            >
+              Grow your Solar Energy Business!! Get Solar home leads!!
               <br/>
               **Under Construction**
             </ProjectCard>
