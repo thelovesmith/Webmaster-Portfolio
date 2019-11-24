@@ -4,3 +4,4 @@
 + Some more animations/springsth
 + REVISE fonts (google fonts or gatsby plugin google fonts)
 + Upgrade Tailwinds
++ Optimize Images

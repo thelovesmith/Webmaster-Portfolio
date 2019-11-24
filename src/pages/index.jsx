@@ -1,25 +1,16 @@
 /*global tw */
 import React from "react";
-import styled from "react-emotion";
 import "typeface-cantata-one";
 import "typeface-open-sans";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import SEO from "../components/SEO";
 import SVG from "../components/SVG";
 import ProjectCard from "../components/ProjectCard";
-import {
-  rotate,
-  UpDown,
-  UpDownWide,
-  waveAnimation
-} from "../styles/animations";
+import { UpDown, UpDownWide, waveAnimation } from "../styles/animations";
 import { hidden } from "../styles/utils";
 import { colors } from "../../tailwind";
-import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
-import triangle from "../images/triangle.svg";
 import potluck from "../images/potluck1.png";
-// import avatar from '../images/avery.png';
 import gits from "../images/GITS.png";
 import jaws from "../images/jaws.png";
 import code from "../images/code.png";
@@ -37,185 +28,33 @@ import flutter from "../images/flutter.jpeg";
 import redux from "../images/redux.jpg";
 import islandStream1 from "../images/islandStream1.png";
 import solarX from "../images/solarX.png";
-// import islandStream2  from "../images/islandStream2.png";
-// import coder from '../images/coder.svg';
 import program from "../images/program.svg";
 import "../styles/global";
 
-const Divider = styled(ParallaxLayer)`
-  ${tw("absolute w-full h-full")};
-  background-image: ${props => props.bg};
-  svg {
-    fill: ${props => props.fill};
-  }
-  clip-path: ${props => props.clipPath};
-`;
-
-const DividerMiddle = styled(Divider)`
-  clip-path: polygon(0 15%, 100% 25%, 100% 85%, 0 75%);
-`;
-
-const Content = styled(ParallaxLayer)`
-  ${tw("p-6 md:p-12 lg:p-24  justify-center items-center flex z-50")};
-`;
-const ContentTwo = styled(ParallaxLayer)`
-  ${tw(
-    "p-6 md:p-12 lg:p-24 justify-center items-center  lg:flex md:flex  sm:flex sm:flex-col-reverse z-50 "
-  )};
-`;
-
-const Hero = styled.div`
-  ${tw("w-full flex flex-col xl:w-2/3 lg:flex-col sm:mb-32 sm:mt-32")};
-  text-align: center;
-  justify-content: center;
-`;
-
-const Inner = styled.div`
-  ${tw("w-full xxl:w-2/3 text-center lg:text-left lg:full")};
-`;
-const InnerTwo = styled.div`
-  ${tw("w-full xxl:w-2/3 text-center lg:text-left  ")};
-`;
-
-const BigTitle = styled.p`
-  ${tw("text-5xl sm:text-4xl lg:text-5xl font-serif text-white m-0")};
-  text-shadow: 0 5px 35px rgba(255, 255, 255, 0.35);
-`;
-
-const Title = styled.h1`
-  ${tw(
-    "text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 sm:mb-4 lg:mb-10 tracking-wide relative inline-block "
-  )};
-  text-shadow: 1px 2px 15px rgba(255, 255, 255, 0.4);
-  &:before {
-    content: "";
-    width: 40px;
-    height: 40px;
-    background: url(${triangle});
-    position: absolute;
-    background-size: 40px;
-    animation: ${rotate} 4s linear infinite;
-    left: -60px;
-    top: 0px;
-  }
-`;
-
-const Subtitle = styled.p`
-  ${tw(
-    "text-2xl sm:text-base md:text-2xl lg:text-3xl font-sans text-white mt-8 p-0"
-  )};
-  text-shadow: 1px 1px 15px rgba(255, 255, 0, 0.3);
-`;
-
-const ProjectsWrapper = styled.div`
-  ${tw("flex flex-wrap justify-between mt-8  lg:w-full")};
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 1200px) {
-    grid-gap: 3rem;
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-`;
-
-const WaveWrapper = styled.div`
-  ${tw("absolute pin-b w-full")};
-  transform: matrix(1, 0, 0, -1, 0, 0);
-`;
-
-const InnerWave = styled.div`
-  ${tw("relative h-full")};
-  svg {
-    width: 100%;
-    height: 40vh;
-  }
-`;
-
-const AboutHero = styled.div`
-  ${tw("flex flex-col lg:flex-row items-center m-8")};
-`;
-
-const Avatar = styled(Img)`
-  ${tw("rounded-full w-48 xl:w-1/2 shadow-lg h-auto sm:mb-8")};
-  margin: auto;
-`;
-const Avatar2 = styled.img`
-  ${tw("rounded-full w-48 xl:w-1/2 shadow-lg h-auto sm:mb-8")};
-`;
-
-const AboutSub = styled.span`
-  ${tw(
-    "text-white sm:p-2 lg: pt-12 lg:p-8 sm:text-xl text-2xl lg:text-4xl xl:text-4xl"
-  )};
-  text-shadow: 1px 1px 5px black;
-  background-image: linear-gradient(to right, #96232526, #96414345);
-  border-radius: 5px 20px;
-  border: 2px outset orange;
-`;
-
-const AboutDesc = styled.p`
-  ${tw(
-    "text-white sm:text-lg lg:text-3xl xl:text-3xl sm:p-2  lg:p-8 sm:tracking-tight"
-  )};
-  line-height: 1.3em;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-shadow: 1px 1px 5px black;
-  border-radius: 20px 5px;
-  border: 1px groove orange;
-`;
-
-const ContactText = styled.p`
-  ${tw("text-grey-light font-sans text-xl md:text-2xl lg:text-3xl")};
-  a {
-    color: #e07628;
-    text-decoration: none;
-  }
-`;
-
-const Footer = styled.footer`
-  ${tw(
-    "text-center  absolute pin-b p-6 font-sans text-md md:text-lg lg:text-2xl"
-  )};
-  color: #f97628;
-  text-shadow: 1px 1px 3px #af7451;
-
-  a {
-    text-decoration: none;
-  }
-`;
-
-const Skills = styled.div`
-  ${tw("md:w-1/2flex flex-wrap justify-between mt-6 lg:w-full")};
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 1200px) {
-    grid-gap: 1rem;
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-`;
-const Language = styled.img`
-  ${tw("w-4/5 sm:w-2/3 lg:w-4/5")}
-  width: 75%;
-  justify-self: center;
-  align-self: center;
-`;
+import {
+  Divider,
+  DividerMiddle,
+  Content,
+  ContentTwo,
+  Hero,
+  Inner,
+  InnerTwo,
+  BigTitle,
+  Title,
+  Subtitle,
+  ProjectsWrapper,
+  WaveWrapper,
+  InnerWave,
+  AboutHero,
+  Avatar,
+  Avatar2,
+  AboutSub,
+  AboutDesc,
+  ContactText,
+  Footer,
+  Skills,
+  Language
+} from "../components/index.css";
 
 const Index = () => {
   const data = useStaticQuery(graphql`
@@ -406,10 +245,9 @@ const Index = () => {
           <Inner>
             <Title>Tech</Title>
             <AboutDesc>
-              Over the years I have acquired an array of skills, and the list of
-              tech I use is ever growing. Im not going to map through the whole
-              thing but below are a few technologies I have been using more
-              recently.
+              Over the years I have acquired an array of skills, and my toolbag
+              is ever-growing. Im not going to map through the whole thing but
+              below are a few technologies I have been using recently.
             </AboutDesc>
             <Skills>
               <Language src={code}></Language>
@@ -726,14 +564,18 @@ const Index = () => {
               {/* <Avatar src={coder} alt="Avery-Dante" /> */}
               {/*   */}
               <AboutDesc>
-                I am a Full-Stack Developer, Producer, and a Designer born and
-                raised in Philadelphia who is dedicated to bringing ideas to
-                life and is actively looking for work. I enjoy the thrill of
-                exploring new technologies and engineering innovative products.
-                If you are a fellow Developer, Designer, Producer, Artist, or
+                I am a Full-Stack Developer born and raised in Philadelphia who
+                is dedicated to bringing ideas to life and building lasting
+                professional relationships. I enjoy the thrill of exploring new
+                technologies and engineering innovative products with an arsenal
+                of skills. If you are a Business owner who needs better online
+                presence, an Entrepreneur with an idea, or a fellow Developer or
+                Designer who wants to build something great; I have the skills
+                to assist you in accomplishing your goals.
+                {/* If you are a fellow Developer, Designer, Producer, Artist, or
                 Entrepreneur please don't be afraid to reach out and connect
                 with me on GitHub, LinkedIn, Instagram, or any other social
-                sites!! I am very open to working with others and sharing ideas.
+                sites!! I am very open to working with others and sharing ideas. */}
                 {/* , or a Jack of All Waves if you will. My journey has brought me back to my hometown Philadelphia where I continue to grow and saturate my mind with skills and experience. Forging the way with transparent communication, project management skills, and contagious motivation I strive to produce exceptional results. Equipped with an arsenal of skills I am dedicated to bringing ideas to life and leaving a lasting impression on the people I encounter. */}
               </AboutDesc>
             </AboutHero>
