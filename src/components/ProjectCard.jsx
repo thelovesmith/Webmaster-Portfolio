@@ -11,6 +11,7 @@ const Wrapper = styled.a`
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 1px 1px 20px ghostwhite;
   }
 `;
 
@@ -32,7 +33,7 @@ const Back = styled.div`
 display: flex-column;
 justify-content: center;
 align-content: center;
-border-radius: 5px;
+border-radius: 20px / 30px;
 text-align: center;
 background: #000046;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */

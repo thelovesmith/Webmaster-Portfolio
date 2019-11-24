@@ -690,8 +690,6 @@ const Index = () => {
                 bg={solarX} //"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
               >
                 Grow your Solar Energy Business!! Get Solar home leads!!
-                <br />
-                **Under Construction**
               </ProjectCard>
               <ProjectCard
                 title="Island Stream"
