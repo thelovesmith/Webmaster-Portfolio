@@ -270,8 +270,8 @@ const Index = () => {
               <Language src={graphqql}></Language>
               <Language src={redux}></Language>
               <Language src={flutter}></Language>
-              <Language src={analytics} ></Language>
-              <Language src={wordpress} ></Language>
+              <Language src={analytics}></Language>
+              <Language src={wordpress}></Language>
             </Skills>
           </Inner>
         </Content>
