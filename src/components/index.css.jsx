@@ -52,7 +52,7 @@ export const BigTitle = styled.p`
 
 export const Title = styled.h1`
   ${tw(
-    "text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 sm:mb-4 lg:mb-10 tracking-wide relative inline-block "
+    "text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 mt-8 sm:m-4 lg:m-10 tracking-wide relative inline-block "
   )};
   text-shadow: 1px 2px 15px rgba(255, 255, 255, 0.4);
   &:before {
@@ -146,6 +146,13 @@ export const AboutDesc = styled.p`
 `;
 
 export const ContactText = styled.p`
+  ${tw("text-grey-light font-sans text-xl pb-10 md:text-2xl lg:text-3xl")};
+  a {
+    color: #e07628;
+    text-decoration: none;
+  }
+`;
+export const ContactFormWrapper = styled.div`
   ${tw("text-grey-light font-sans text-xl md:text-2xl lg:text-3xl")};
   a {
     color: #e07628;
@@ -155,7 +162,7 @@ export const ContactText = styled.p`
 
 export const Footer = styled.footer`
   ${tw(
-    "text-center  absolute pin-b p-6 font-sans text-md md:text-lg lg:text-2xl"
+    "text-center  absolute pin-b p-6 mt-6 font-sans text-md md:text-lg lg:text-xl"
   )};
   color: #f97628;
   text-shadow: 1px 1px 3px #af7451;

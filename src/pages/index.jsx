@@ -28,6 +28,12 @@ import flutter from "../images/flutter.jpeg";
 import redux from "../images/redux.jpg";
 import islandStream1 from "../images/islandStream1.png";
 import solarX from "../images/solarX.png";
+import fast from "../images/fast.png";
+import fro from "../images/fro.png";
+import hemp from "../images/hemp.png";
+import cs2000 from "../images/cs2000.png";
+import analytics from "../images/analytics.png";
+import wordpress from "../images/wordpress.jpeg";
 import program from "../images/program.svg";
 import "../styles/global";
 
@@ -50,11 +56,13 @@ import {
   Avatar2,
   AboutSub,
   AboutDesc,
+  ContactFormWrapper,
   ContactText,
   Footer,
   Skills,
   Language
 } from "../components/index.css";
+import Form from "../components/form/form";
 
 const Index = () => {
   const data = useStaticQuery(graphql`
@@ -71,7 +79,7 @@ const Index = () => {
   return (
     <React.Fragment>
       <SEO />
-      <Parallax pages={7}>
+      <Parallax pages={8}>
         <Divider speed={0.2} offset={0}>
           <UpDown>
             <SVG
@@ -241,7 +249,7 @@ const Index = () => {
           offset={1.1}
           factor={2}
         />
-        <Content speed={0.5} offset={2.5} factor={1.5}>
+        <Content speed={0.5} offset={2.75} factor={1.5}>
           <Inner>
             <Title>Tech</Title>
             <AboutDesc>
@@ -262,6 +270,8 @@ const Index = () => {
               <Language src={graphqql}></Language>
               <Language src={redux}></Language>
               <Language src={flutter}></Language>
+              <Language src={analytics} ></Language>
+              <Language src={wordpress} ></Language>
             </Skills>
           </Inner>
         </Content>
@@ -483,7 +493,7 @@ const Index = () => {
             top="70%"
           />
         </Divider>
-        <Content speed={0.5} offset={3.0} factor={6}>
+        <Content speed={0.5} offset={3.0} factor={7.75}>
           <Inner>
             <Title>Projects</Title>
             <ProjectsWrapper>
@@ -533,11 +543,41 @@ const Index = () => {
                 title="Island Stream"
                 link="https://www.islandstreamapp.com/"
                 bg={islandStream1}
-              ></ProjectCard>
+              >
+                Carribean Culture Media Platform
+              </ProjectCard>
+              <ProjectCard
+                title="Hemp Up"
+                link="https://www.hempup.com/"
+                bg={hemp}
+              >
+                High Quality CBD Products
+              </ProjectCard>
+              <ProjectCard
+                title="CS2000"
+                link="https://www.capitalsource2000.com/"
+                bg={cs2000}
+              >
+                Profit through small business with CS2000
+              </ProjectCard>
+              <ProjectCard
+                title="Federal Recovery"
+                link="https://www.federalrecoveryoperations.com/"
+                bg={fro}
+              >
+                Carribean Culture Media Platform
+              </ProjectCard>
+              <ProjectCard
+                title="Fast Advance Funding"
+                link="https://faftest.netlify.com/"
+                bg={fast}
+              >
+                Carribean Culture Media Platform
+              </ProjectCard>
             </ProjectsWrapper>
           </Inner>
         </Content>
-        <Divider fill="#59C173" speed={0.2} offset={6}>
+        <Divider fill="#59C173" speed={0.2} offset={7}>
           <WaveWrapper>
             <InnerWave>
               <svg
@@ -584,9 +624,12 @@ const Index = () => {
           </AboutDesc> */}
           </Inner>
         </Content>
-        <ContentTwo speed={0.4} offset={6}>
+        <ContentTwo speed={0.4} offset={7}>
           <InnerTwo>
             <Title>Please Get In Touch:</Title>
+            {/* <ContactFormWrapper>
+              <Form />
+            </ContactFormWrapper> */}
             <ContactText>
               Email me <a href="mailto:averydante9@gmail.com">HERE</a> or find
               me on other platforms:{" "}
