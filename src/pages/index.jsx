@@ -510,10 +510,10 @@ const Index = () => {
                 link="https://thelovesmith.github.io/Project-1---Don-t-Jeopardize-Me-/"
                 bg={jeopardy} //"linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
               >
-                Test you basic coding knowledge with this fun interactive
+                Test your basic coding knowledge with this fun, interactive
                 Jeopardy game!!!
                 <br />
-                The first website I ever made. lol
+                <em>The first website I ever made. lol</em>
               </ProjectCard>
               <ProjectCard
                 title="Poppin' Potluck"
@@ -521,6 +521,7 @@ const Index = () => {
                 bg={potluck} //"linear-gradient(to right, #009245 0%, #FCEE21 100%)"
               >
                 Organize your next potluck with this user friendly interface!!!
+                <em>**Under Construction**</em>
               </ProjectCard>
               <ProjectCard
                 title="Capstone Project"
@@ -530,7 +531,7 @@ const Index = () => {
                 Jack Of All Waves music collective website; become a friend of
                 JAWS!!!
                 <br />
-                **Under Construction**
+                <em>**Under Construction**</em>
               </ProjectCard>
               <ProjectCard
                 title="Solar Xchange"
