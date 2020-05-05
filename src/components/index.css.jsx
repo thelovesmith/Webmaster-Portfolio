@@ -5,18 +5,18 @@ import {
   rotate,
   UpDown,
   UpDownWide,
-  waveAnimation
+  waveAnimation,
 } from "../styles/animations";
 import Img from "gatsby-image";
 import triangle from "../images/triangle.svg";
 
 export const Divider = styled(ParallaxLayer)`
   ${tw("absolute w-full h-full")};
-  background-image: ${props => props.bg};
+  background-image: ${(props) => props.bg};
   svg {
-    fill: ${props => props.fill};
+    fill: ${(props) => props.fill};
   }
-  clip-path: ${props => props.clipPath};
+  clip-path: ${(props) => props.clipPath};
 `;
 
 export const DividerMiddle = styled(Divider)`
@@ -28,7 +28,7 @@ export const Content = styled(ParallaxLayer)`
 `;
 export const ContentTwo = styled(ParallaxLayer)`
   ${tw(
-    "p-6 md:p-12 lg:p-24 justify-center items-center  lg:flex md:flex  sm:flex sm:flex-col-reverse z-50 "
+    "p-6 md:p-12 lg:p-24 justify-center items-center  lg:flex md:flex  sm:flex sm:flex-col z-50 "
   )};
 `;
 
@@ -43,6 +43,8 @@ export const Inner = styled.div`
 `;
 export const InnerTwo = styled.div`
   ${tw("w-full xxl:w-2/3 text-center lg:text-left  ")};
+  display: flex;
+  flex-direction: column;
 `;
 
 export const BigTitle = styled.p`
@@ -52,7 +54,7 @@ export const BigTitle = styled.p`
 
 export const Title = styled.h1`
   ${tw(
-    "text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-8 mt-8 sm:m-4 lg:m-10 tracking-wide relative inline-block "
+    "text-3xl sm:text-xl lg:text-3xl font-serif text-white mb-4 mt-4 sm:m-4 lg:m-10 tracking-wide relative inline-block "
   )};
   text-shadow: 1px 2px 15px rgba(255, 255, 255, 0.4);
   &:before {
@@ -154,6 +156,7 @@ export const ContactText = styled.p`
 `;
 export const ContactFormWrapper = styled.div`
   ${tw("text-grey-light font-sans text-xl md:text-2xl lg:text-3xl")};
+  align-self: center;
   a {
     color: #e07628;
     text-decoration: none;
@@ -161,9 +164,7 @@ export const ContactFormWrapper = styled.div`
 `;
 
 export const Footer = styled.footer`
-  ${tw(
-    "text-center  absolute pin-b p-6 mt-6 font-sans text-md md:text-lg lg:text-xl"
-  )};
+  ${tw("text-center pin-b p-8  font-sans text-md md:text-lg lg:text-xl")};
   color: #f97628;
   text-shadow: 1px 1px 3px #af7451;
 

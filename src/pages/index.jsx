@@ -60,7 +60,7 @@ import {
   ContactText,
   Footer,
   Skills,
-  Language
+  Language,
 } from "../components/index.css";
 import Form from "../components/form/form";
 
@@ -79,7 +79,7 @@ const Index = () => {
   return (
     <React.Fragment>
       <SEO />
-      <Parallax pages={8}>
+      <Parallax pages={8.25}>
         <Divider speed={0.2} offset={0}>
           <UpDown>
             <SVG
@@ -577,7 +577,7 @@ const Index = () => {
             </ProjectsWrapper>
           </Inner>
         </Content>
-        <Divider fill="#59C173" speed={0.2} offset={7}>
+        <Divider fill="#59C173" speed={0.2} offset={7.35}>
           <WaveWrapper>
             <InnerWave>
               <svg
@@ -624,12 +624,11 @@ const Index = () => {
           </AboutDesc> */}
           </Inner>
         </Content>
-        <ContentTwo speed={0.4} offset={7}>
+        <ContentTwo speed={0.4} offset={7.25}>
+          <Avatar2 src={program} />
           <InnerTwo>
             <Title>Please Get In Touch:</Title>
-            {/* <ContactFormWrapper>
-              <Form />
-            </ContactFormWrapper> */}
+
             <ContactText>
               Email me <a href="mailto:averydante9@gmail.com">HERE</a> or find
               me on other platforms:{" "}
@@ -643,8 +642,34 @@ const Index = () => {
                 LinkedIn
               </a>
             </ContactText>
+            <ContactFormWrapper>
+              <form
+                action="https://www.paypal.com/cgi-bin/webscr"
+                method="post"
+                target="_top"
+              >
+                <input type="hidden" name="cmd" value="_donations" />
+                <input type="hidden" name="business" value="GXABHKGS3NYKE" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                  border="0"
+                  name="submit"
+                  title="PayPal - The safer, easier way to pay online!"
+                  alt="Donate with PayPal button"
+                />
+                <img
+                  alt=""
+                  border="0"
+                  src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                  width="1"
+                  height="1"
+                />
+              </form>
+            </ContactFormWrapper>
           </InnerTwo>
-          <Avatar2 src={program} />
+
           <Footer>2018 &copy; by Avery-Dante Hinds. </Footer>
         </ContentTwo>
         <Divider speed={0.1} offset={4}>
