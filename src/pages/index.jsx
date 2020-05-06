@@ -498,42 +498,6 @@ const Index = () => {
             <Title>Projects</Title>
             <ProjectsWrapper>
               <ProjectCard
-                title="GITS"
-                link="http://gits-project.herokuapp.com/"
-                bg={gits} //"linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
-              >
-                Take an interplanetary trip and learn more about our solar
-                system!!!
-              </ProjectCard>
-              <ProjectCard
-                title="Jeopardize Me"
-                link="https://thelovesmith.github.io/Project-1---Don-t-Jeopardize-Me-/"
-                bg={jeopardy} //"linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
-              >
-                Test your basic coding knowledge with this fun, interactive
-                Jeopardy game!!!
-                <br />
-                <em>The first website I ever made. lol</em>
-              </ProjectCard>
-              <ProjectCard
-                title="Poppin' Potluck"
-                link="https://poppin-potluck.netlify.com//"
-                bg={potluck} //"linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-              >
-                Organize your next potluck with this user friendly interface!!!
-                <em>**Under Construction**</em>
-              </ProjectCard>
-              <ProjectCard
-                title="Capstone Project"
-                link="https://jackofallwaves.netlify.com/"
-                bg={jaws} //"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-              >
-                Jack Of All Waves music collective website; become a friend of
-                JAWS!!!
-                <br />
-                <em>**Under Construction**</em>
-              </ProjectCard>
-              <ProjectCard
                 title="Solar Xchange"
                 link="https://mysolarxchange.com/"
                 bg={solarX} //"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
@@ -574,6 +538,42 @@ const Index = () => {
                 bg={fast}
               >
                 Carribean Culture Media Platform
+              </ProjectCard>
+              <ProjectCard
+                title="GITS"
+                link="http://gits-project.herokuapp.com/"
+                bg={gits} //"linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+              >
+                Take an interplanetary trip and learn more about our solar
+                system!!!
+              </ProjectCard>
+              <ProjectCard
+                title="Jeopardize Me"
+                link="https://thelovesmith.github.io/Project-1---Don-t-Jeopardize-Me-/"
+                bg={jeopardy} //"linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+              >
+                Test your basic coding knowledge with this fun, interactive
+                Jeopardy game!!!
+                <br />
+                <em>The first website I ever made. lol</em>
+              </ProjectCard>
+              <ProjectCard
+                title="Poppin' Potluck"
+                link="https://poppin-potluck.netlify.com//"
+                bg={potluck} //"linear-gradient(to right, #009245 0%, #FCEE21 100%)"
+              >
+                Organize your next potluck with this user friendly interface!!!
+                <em>**Under Construction**</em>
+              </ProjectCard>
+              <ProjectCard
+                title="Capstone Project"
+                link="https://jackofallwaves.netlify.com/"
+                bg={jaws} //"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+              >
+                Jack Of All Waves music collective website; become a friend of
+                JAWS!!!
+                <br />
+                <em>**Under Construction**</em>
               </ProjectCard>
             </ProjectsWrapper>
           </Inner>
