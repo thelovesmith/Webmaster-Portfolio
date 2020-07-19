@@ -253,25 +253,25 @@ const Index = () => {
           <Inner>
             <Title>Tech</Title>
             <AboutDesc>
-              Over the years I have acquired an array of skills, and my toolbag
-              is ever-growing. Im not going to map through the whole thing but
+              Over the years I have acquired an array of skills, and my toolkit
+              is ever-growing. I'm not going to map through the whole thing but
               below are a few technologies I have been using recently.
             </AboutDesc>
             <Skills>
               <Language src={code}></Language>
               <Language src={reactlogo}></Language>
               <Language src={node}></Language>
+              <Language src={gatsby}></Language>
+              <Language src={graphqql}></Language>
+              <Language src={flutter}></Language>
+              <Language src={adobe}></Language>
               <Language src={firebase}></Language>
               <Language src={django}></Language>
               <Language src={mongo}></Language>
-              <Language src={postgres}></Language>
-              <Language src={adobe}></Language>
-              <Language src={gatsby}></Language>
-              <Language src={graphqql}></Language>
-              <Language src={redux}></Language>
-              <Language src={flutter}></Language>
               <Language src={analytics}></Language>
               <Language src={wordpress}></Language>
+              <Language src={postgres}></Language>
+              <Language src={redux}></Language>
             </Skills>
           </Inner>
         </Content>
@@ -559,7 +559,7 @@ const Index = () => {
               </ProjectCard>
               <ProjectCard
                 title="Poppin' Potluck"
-                link="https://poppin-potluck.netlify.com//"
+                link="/#"
                 bg={potluck} //"linear-gradient(to right, #009245 0%, #FCEE21 100%)"
               >
                 Organize your next potluck with this user friendly interface!!!
@@ -567,7 +567,7 @@ const Index = () => {
               </ProjectCard>
               <ProjectCard
                 title="Capstone Project"
-                link="https://jackofallwaves.netlify.com/"
+                link="/#"
                 bg={jaws} //"linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
               >
                 Jack Of All Waves music collective website; become a friend of
@@ -609,9 +609,9 @@ const Index = () => {
                 is dedicated to bringing ideas to life and building lasting
                 professional relationships. I enjoy the thrill of exploring new
                 technologies and engineering innovative products with an arsenal
-                of skills. If you are a Business owner who needs better online
-                presence, an Entrepreneur with an idea, or a fellow Developer or
-                Designer who wants to build something great; I have the skills
+                of skills. If you are a business owner who needs better online
+                presence, an entrepreneur with an idea, or a fellow developer or
+                designer who wants to build something great; I have the skills
                 to assist you in accomplishing your goals.
                 {/* If you are a fellow Developer, Designer, Producer, Artist, or
                 Entrepreneur please don't be afraid to reach out and connect
@@ -643,7 +643,7 @@ const Index = () => {
                 LinkedIn
               </a>
             </ContactText>
-            <ContactFormWrapper>
+            {/* <ContactFormWrapper>
               <form
                 action="https://www.paypal.com/cgi-bin/webscr"
                 method="post"
@@ -668,10 +668,10 @@ const Index = () => {
                   height="1"
                 />
               </form>
-            </ContactFormWrapper>
+            </ContactFormWrapper> */}
           </InnerTwo>
 
-          <Footer>2018 &copy; by Avery-Dante Hinds. </Footer>
+          <Footer>2020 &copy; by Avery-Dante Hinds. </Footer>
         </ContentTwo>
         <Divider speed={0.1} offset={4}>
           <UpDown>
