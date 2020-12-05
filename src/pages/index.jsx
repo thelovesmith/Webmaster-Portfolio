@@ -533,8 +533,8 @@ const Index = () => {
                 Carribean Culture Media Platform
               </ProjectCard>
               <ProjectCard
-                title="Fast Advance Funding"
-                link="https://faftest.netlify.com/"
+                title="Gatsby Business Template"
+                link="https://businesswebsitetemplatemain.gtsb.io/"
                 bg={fast}
               >
                 Carribean Culture Media Platform
