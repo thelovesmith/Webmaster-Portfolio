@@ -516,7 +516,7 @@ const Index = () => {
                 link="https://www.hempup.com/"
                 bg={hemp}
               >
-                High Quality CBD Products
+                Shopify Gatsby Template
               </ProjectCard>
               <ProjectCard
                 title="CS2000"
